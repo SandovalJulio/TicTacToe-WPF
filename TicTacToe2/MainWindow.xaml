@@ -1,0 +1,78 @@
+﻿<Window x:Name="mainWindow" x:Class="TicTacToe2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicTacToe2"
+        mc:Ignorable="d"
+        Title="TicTacToe por Julio" Height="600" Width="800" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen" MaxHeight="600" MaxWidth="800" Loaded="mainWindow_Loaded">
+    <!--JCSS at 19/01/2020 02:34:52 Terminé-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="800*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="imageBackground" HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="800" Source="Resources/Background.png" Stretch="Fill" Grid.ColumnSpan="2"/>
+        <Image x:Name="titleBar" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="800" Source="Resources/TitleBar.png" Grid.ColumnSpan="2"/>
+        <Image x:Name="exitButton" HorizontalAlignment="Left" Height="20" Margin="780,0,0,0" VerticalAlignment="Top" Width="20" Source="Resources/Exit.png" MouseEnter="Enter" MouseLeave="Leave" MouseUp="exitButton_MouseDown" MouseDown="Down" Grid.ColumnSpan="2"/>
+        <Image x:Name="minusButton" HorizontalAlignment="Left" Height="20" Margin="760,0,0,0" VerticalAlignment="Top" Width="20" Source="Resources/Minus.png" MouseDown="Down" MouseEnter="Enter" MouseLeave="Leave" MouseUp="minusButton_MouseDown"/>
+        <Image x:Name="imageWindow0" Margin="174.5,78,174.5,78" Source="Resources/Window.png"/>
+        <Image x:Name="imageHelp" Margin="747,20,0,526" Source="Signo.png" Stretch="Fill" Opacity="0.65" Cursor="Hand" MouseEnter="Leave" MouseLeave="Enter" MouseDown="Up" MouseUp="ShowInfo"/>
+
+        <Grid x:Name="gridInfo" HorizontalAlignment="Left" Height="580" Margin="0,20,0,0" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="2" IsEnabled="False" Opacity="0">
+            <Image Margin="661,39,0,427" Source="Window.png" Stretch="Fill" Cursor="Hand" MouseDown="Down" MouseEnter="Enter" MouseLeave="Leave" MouseUp="HideInfo"/>
+            <TextBlock x:Name="textDesignedBy" HorizontalAlignment="Left" Margin="680,58,0,0" TextWrapping="Wrap" Text="DISEÑADO Y DESARROLLADO POR" VerticalAlignment="Top" FontFamily="Montserrat" FontSize="10" FontWeight="Bold" OpacityMask="Black" Foreground="#FF464646" Width="101" Height="55" TextAlignment="Center" Cursor=""/>
+            <TextBlock x:Name="textMyName" HorizontalAlignment="Left" Margin="684,98,0,0" TextWrapping="Wrap" Text="JULIO SANDOVAL" VerticalAlignment="Top" FontFamily="Montserrat" FontSize="10" FontWeight="Bold" OpacityMask="Black" Foreground="#FF999999" TextAlignment="Center" MouseUp="GoGitHub" Cursor="Hand"/>
+            <Image x:Name="imgGitHub" Margin="721,115,60,446" Source="Sin título.png" Stretch="Fill" MouseEnter="Enter" MouseLeave="Leave" MouseDown="Down" MouseUp="GoGitHub" Cursor="Hand"/>
+        </Grid>
+
+        <Grid x:Name="gridHome" HorizontalAlignment="Left" Height="580" Margin="0,20,0,0" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="2" Visibility="Visible">
+            <Image Height="50" VerticalAlignment="Top" Source="Resources/2 JUGADORES.png" RenderTransformOrigin="0.387,-0.19" Canvas.Left="269" Canvas.Top="150" Margin="269,145,269,0"/>
+            <Image HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="68" Source="Resources/ELIGE.png" Canvas.Left="366" Canvas.Top="265" Margin="366,263,0,0"/>
+            <Image x:Name="oFrame" Source="O frame2.png" Stretch="Fill" Height="112" Canvas.Left="419" Canvas.Top="296" Width="112" MouseDown="Down" MouseEnter="Enter" MouseLeave="Leave" MouseUp="oFrame_MouseUp" Margin="419,302,269,166" Cursor="Hand"/>
+            <Image x:Name="xFrame" Source="X frame2.png" Stretch="Fill" Height="112" Canvas.Left="269" Canvas.Top="296" Width="112" MouseDown="Down" MouseEnter="Enter" MouseLeave="Leave" MouseUp="xFrame_MouseUp" Margin="269,302,419,166" Cursor="Hand"/>
+        </Grid>
+
+        <Grid x:Name="gridPlaying" HorizontalAlignment="Left" Height="580" Margin="0,20,0,0" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="2" Visibility="Hidden"
+              >
+            <Image Source="1.png" Stretch="Fill" Height="240" Canvas.Left="279" Canvas.Top="156" Width="240" Margin="280,170"/>
+            <Image x:Name="button5" Margin="368,257" Source="Capa 5.png" Stretch="Fill" Opacity="0" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" MouseDown="ButtonDown" Uid="4" MouseUp="ButtonUp" Cursor="Hand"/>
+            <Image x:Name="button6" Margin="447,257,289,257" Source="Capa 5.png" Stretch="Fill" Opacity="0" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" MouseDown="ButtonDown" Uid="5" MouseUp="ButtonUp" Cursor="Hand"/>
+            <Image x:Name="button8" Margin="368,338,368,176" Source="Capa 5.png" Stretch="Fill" Opacity="0" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" MouseDown="ButtonDown" Uid="7" MouseUp="ButtonUp" Cursor="Hand"/>
+            <Image x:Name="button4" Margin="289,257,447,257" Source="Capa 5.png" Stretch="Fill" Opacity="0" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" MouseDown="ButtonDown" Uid="3" MouseUp="ButtonUp" Cursor="Hand"/>
+            <Image x:Name="button9" Margin="447,338,289,176" Source="Capa 5.png" Stretch="Fill" Opacity="0" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" MouseDown="ButtonDown" Uid="8" MouseUp="ButtonUp" Cursor="Hand"/>
+            <Image x:Name="button7" Margin="289,338,447,176" Source="Capa 5.png" Stretch="Fill" Opacity="0" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" MouseDown="ButtonDown" Uid="6" MouseUp="ButtonUp" Cursor="Hand"/>
+            <Image x:Name="button2" Margin="368,176,368,338" Source="Capa 5.png" Stretch="Fill" Opacity="0" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" MouseDown="ButtonDown" Uid="1" MouseUp="ButtonUp" Cursor="Hand"/>
+            <Image x:Name="button3" Margin="447,176,289,338" Source="Capa 5.png" Stretch="Fill" Opacity="0" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" MouseDown="ButtonDown" Uid="2" MouseUp="ButtonUp" Cursor="Hand"/>
+            <Image x:Name="button1" Margin="289,176,447,338" Source="Capa 5.png" Stretch="Fill" Opacity="0" MouseEnter="ButtonEnter" MouseLeave="ButtonLeave" MouseDown="ButtonDown" Uid="0" MouseUp="ButtonUp" Cursor="Hand"/>
+            <Image x:Name="imageXTurn" Margin="348,125,334,438" Source="Turno de X.png" Stretch="Fill" Opacity="0"/>
+            <Image x:Name="imageXScore" Margin="519,419,261,145" Source="X__.png" Stretch="Fill"/>
+            <Image x:Name="imageOScore" Margin="244,418,533,145" Source="O__.png" Stretch="Fill"/>
+            <Image x:Name="imageOTurn" Margin="347,125,334,438" Source="Turno de O.png" Stretch="Fill" Opacity="0"/>
+            <Image x:Name="O2" Margin="289,257,447,257" Source="O_Figure.png" Stretch="Fill" Visibility="Hidden" Opacity="0"/>
+            <Image x:Name="X1" Margin="447,257,289,257" Source="X_Figure.png" Stretch="Fill" Visibility="Hidden" Opacity="0"/>
+            <Image x:Name="O3" Margin="289,257,447,257" Source="O_Figure.png" Stretch="Fill" Visibility="Hidden" Opacity="0"/>
+            <Image x:Name="X5" Margin="447,257,289,257" Source="X_Figure.png" Stretch="Fill" Visibility="Hidden" Opacity="0"/>
+            <Image x:Name="O5" Margin="289,257,447,257" Source="O_Figure.png" Stretch="Fill" Visibility="Hidden" Opacity="0"/>
+            <Image x:Name="X4" Margin="447,257,289,257" Source="X_Figure.png" Stretch="Fill" Visibility="Hidden" Opacity="0"/>
+            <Image x:Name="O1" Margin="289,257,447,257" Source="O_Figure.png" Stretch="Fill" Visibility="Hidden" Opacity="0"/>
+            <Image x:Name="X2" Margin="447,257,289,257" Source="X_Figure.png" Stretch="Fill" Visibility="Hidden" Opacity="0"/>
+            <Image x:Name="O4" Margin="289,257,447,257" Source="O_Figure.png" Stretch="Fill" Visibility="Hidden" Opacity="0"/>
+            <Image x:Name="X3" Margin="447,257,289,257" Source="X_Figure.png" Stretch="Fill" Visibility="Hidden" Opacity="0"/>
+            <TextBlock x:Name="textOScore" HorizontalAlignment="Left" Margin="272,415,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontFamily="Montserrat" FontSize="20" FontWeight="Bold" Foreground="#FF303030"/>
+            <TextBlock x:Name="textXScore" HorizontalAlignment="Left" Margin="544,415,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontFamily="Montserrat" FontSize="20" FontWeight="Bold" Foreground="#FF303030"/>
+            <Image x:Name="textOWins" Margin="293,125,292,428" Source="¡GANADOR O!.png" Stretch="Fill" Opacity="0"/>
+            <Image x:Name="textXWins" Margin="295,125,294,428" Source="¡GANADOR X!.png" Stretch="Fill" Opacity="0"/>
+            <Image x:Name="textDraw" Margin="328,126,327,427" Source="¡EMPATE!.png" Stretch="Fill" Opacity="0"/>
+
+        </Grid>
+
+        <Grid x:Name="gridWinner" Visibility="Hidden" MouseUp="gridWinner_MouseUp" Cursor="Hand">
+            <Image Margin="178,78,177,78" Source="Window.png" Stretch="Fill"/>
+        </Grid>
+
+
+
+    </Grid>
+
+</Window>

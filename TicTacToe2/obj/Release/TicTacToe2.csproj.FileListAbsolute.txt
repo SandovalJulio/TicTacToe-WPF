@@ -1,0 +1,14 @@
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\bin\Release\Tic Tac Toe.exe.config
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\bin\Release\Tic Tac Toe.exe
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\bin\Release\Tic Tac Toe.pdb
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\obj\Release\TicTacToe2.csprojAssemblyReference.cache
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\obj\Release\MainWindow.g.cs
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\obj\Release\App.g.cs
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\obj\Release\Tic Tac Toe_MarkupCompile.cache
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\obj\Release\Tic Tac Toe_MarkupCompile.lref
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\obj\Release\MainWindow.baml
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\obj\Release\Tic Tac Toe.g.resources
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\obj\Release\TicTacToe.Properties.Resources.resources
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\obj\Release\TicTacToe2.csproj.GenerateResource.cache
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\obj\Release\Tic Tac Toe.exe
+C:\Users\Julio\source\repos\TicTacToe2\TicTacToe2\obj\Release\Tic Tac Toe.pdb
