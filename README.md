@@ -1,2 +1,3 @@
-# TicTacToe-WPF
-Este es un juego Tic Tac Toe hecho en C# usando WPF en Visual Studio Net Framework
+Juego Tic Tac Toe hecho en C# usando WPF en Visual Studio Net Framework
+<br>
+<img src="TicTacToe.gif" alt="TicTacToe">
