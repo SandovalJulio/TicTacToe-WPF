@@ -40,6 +40,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,6 +59,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="SpeechRecognition.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -126,68 +128,37 @@
     <Resource Include="Resources\X frame2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="X frame2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="O frame2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Capa 5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Turno de X.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="X__.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="O__.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Turno de O.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Window.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="X copia.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="O_Figure.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="X_Figure.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\O_Figure.png" />
     <Resource Include="Resources\X_Figure.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="¡GANADOR O!.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="¡GANADOR X!.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="¡EMPATE!.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Logo.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Signo.png" />
+    <Resource Include="Resources\Gray_microphone_button.png" />
+    <Resource Include="Resources\Red_microphone_button.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="2 JUGADORES.png" />
+    <Resource Include="Resources\¡EMPATE!.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="5347-github_102542.png" />
+    <Resource Include="Resources\¡GANADOR O!.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Sin título.png" />
+    <Resource Include="Resources\¡GANADOR X!.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Signo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Sin título.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Turno de X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\O__.png" />
+    <Resource Include="Resources\X__.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
